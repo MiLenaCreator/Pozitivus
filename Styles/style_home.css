@@ -1,0 +1,815 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+button {
+    font-family: inherit;
+}
+/* Шапка */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    color: rgb(31, 31, 31);
+    
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+.menu {
+    display: flex;
+    gap: 15px; 
+}
+.menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color:rgb(31, 31, 31);
+}
+.request {
+    padding: 10px 25px;
+    border: 1px solid black;           
+    border-radius: 5px;
+    background-color: white; 
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Arial", sans-serif;
+    font-size: 1em;
+}
+/* booking */
+h1, p {
+    margin: 0;
+}
+.booking {
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.booking-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 50px 0 0;
+    text-align:justify; 
+    gap: 20px;      
+}
+.booking-text h1 {
+    font-size: 2.5em;
+    font-family: "Space Grotesk", sans-serif;
+
+}
+.booking-text, .booking-img {
+    flex: 1 1 50%;
+}
+.booking-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.booking-text button, .booking-img button  {
+    padding: 10px 25px;
+    border-color:black;           
+    border-radius: 5px;
+    background-color: black;
+    color: white; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.join-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    
+}
+/* heading */
+.heading {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    display: flex;
+    gap: 20px;
+    /* flex-direction: row;
+    justify-content: flex-start; */
+}
+.heading-h2{
+    display: inline-block;
+    background-color: #b9ff66;
+    border: 1px solid #b9ff66;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-family: "Space Grotesk", sans-serif;
+}
+.heading-h2 h2{
+    margin: 0;
+}
+.heading p {
+    font-size: 0.9em;
+    /* margin-left: 20px; */
+    font-family: "Arial", sans-serif;
+    width: 75%;
+    text-align: justify;
+    margin: 0;
+}
+
+/* карточки service */
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки одинаковой ширины */
+  grid-template-rows: repeat(3, auto);   /* 3 ряда */
+  gap: 30px; /* расстояние между карточками */
+  margin: 40px 0; /* отступ сверху и снизу */
+}
+
+.services > div { /* стили для каждой карточки */
+    border-top: 1px solid black;
+    border-bottom: 5px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+    display: flex;       
+    align-items: stretch;
+}
+.services-text {
+    margin: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* h3 сверху, кнопка снизу */
+}
+/* .services-text h3 {
+  margin: 0 0 10px 0;        
+} */
+
+.services-text button {
+    align-self: flex-start; 
+}
+.services-gray {
+    background-color: #f3f3f3;
+}
+.services-green {
+    background-color: #B9FF66;
+}
+.services-dark {
+    background-color: #191A23;
+}
+.services-gray h3 {
+    
+  background-color: #b9ff66; /*цвет плашки */
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin: 0 0 10px 0; /* отступ снизу, чтобы не прилипал к кнопке */
+  font-family: "Space Grotesk", sans-serif;
+  display: inline-block; /* чтобы фон был по ширине текста */
+  line-height: 1;
+}
+.services-green h3 {
+    
+  background-color: #f3f3f3; /*цвет плашки */
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin: 0 0 10px 0; /* отступ снизу, чтобы не прилипал к кнопке */
+  font-family: "Space Grotesk", sans-serif;
+  display: inline-block; /* чтобы фон был по ширине текста */
+  line-height: 1;
+}
+.services-dark h3 {
+    
+  background-color: #f3f3f3; /*цвет плашки */
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin: 0 0 10px 0; /* отступ снизу, чтобы не прилипал к кнопке */
+  font-family: "Space Grotesk", sans-serif;
+  display: inline-block; /* чтобы фон был по ширине текста */
+  line-height: 1;
+}
+button.sb1, button.sb2, button.sb3 {
+  display: flex;              /* делаем flex-контейнер */
+  align-items: center;        /* выравниваем элементы по вертикали */
+  gap: 8px;                   /* расстояние между иконкой и текстом */
+  cursor: pointer;
+  font-family: inherit;
+
+}
+
+button.sb1 img, button.sb2 img, button.sb3 img {
+  display: inline-block;
+  width: 35px; 
+  height: 35px;
+}
+.sb1, .sb2 {
+    background-color: inherit;
+    border: 0;
+}
+.sb3 {
+    background-color: inherit;
+    border: 0;
+    color: white;
+}
+
+ /* предложение */
+
+ .proposal-bg {
+    background-color: #f3f3f3;
+    height: 350px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 20px;
+    border-radius: 20px;
+    overflow: visible; /* чтобы картинка могла выходить за границы */
+    position: relative;
+    padding: 40px 60px;
+ }
+ 
+ .proposal-text {
+    flex: 1 1 45%; /* занимает 45% ширины контейнера */
+    padding: 30px 100px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+ }
+ .proposal-button {
+    flex: 1 1 20%; /* занимает 20% ширины контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+ }
+ .get-proposal {
+    padding: 15px 5px;
+    border: 1px solid #191A23;         
+    border-radius: 8px;
+    background-color: #191A23;
+    color: white; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: start; /* чтобы кнопка не растягивалась */
+ }
+    .get-proposal:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .proposal-img {
+  flex: 1 1 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.proposal-img img {
+  width: 85%;
+  max-width: 350px;
+  position: relative;
+  bottom: -30px;  /* выступает вниз */
+  top: -30px; 
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+/*Case Solutions*/
+.case-solutions {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #191A23;
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+  gap: 0; /* убираем промежутки между колонками — всё решим бордером */
+  margin-bottom: 80px;
+}
+
+.case {
+    flex: 1; /* каждая колонка равной ширины */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 30px;
+  text-align: left;
+  gap: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3); /* вертикальная разделительная линия */
+}
+/* убираем последнюю разделительную линию */
+.case:last-child {
+  border-right: none;
+}
+.learn-more {
+    align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px;
+  background-color: transparent;
+  color: #b9ff66;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Arial", sans-serif;
+  box-shadow: none;       /* убираем внешнюю тень */
+  outline: none;          /* убираем рамку при фокусе */
+  border: none;           /* если не нужна рамка — можно убрать */
+}
+
+.learn-more img {
+  width: 30px;
+  height: 30px;
+}
+
+/*Details*/
+
+.details {
+  display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 80px;
+  margin: 0;              /* убираем лишние отступы */
+  width: 100%;            /* чтобы занимал всю ширину родителя */
+}
+
+.details-container {
+     width: 100vw;        /* ширина всей видимой области */
+     align-items: center;
+  box-sizing: border-box; /* чтобы padding не "раздвигал" ширину */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px; /* отступы слева и справа */
+  background-color: transparent; 
+}
+
+/* Убираем стандартную стрелку summary */
+details summary {
+  list-style: none;
+  appearance: none;
+  cursor: pointer;
+  
+}
+
+/* Обертка для цифры и текста */
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Номер (например, 01) — крупный и с другим шрифтом */
+.summary-number {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Space Grotesk", monospace;
+  color: #191a23;
+}
+
+/* Текст (Consultation) */
+.summary-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #191a23;
+}
+
+/* Сам summary — выравниваем контент по краям */
+details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Иконка справа */
+.summary-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summary-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* по умолчанию показываем только плюс */
+.icon-plus {
+  display: block;
+}
+.icon-minus {
+  display: none;
+}
+
+/* при открытии details — показываем минус, скрываем плюс */
+details[open] .icon-plus {
+  display: none;
+}
+details[open] .icon-minus {
+  display: block;
+}
+
+/* плавная смена иконки через opacity (опционально) */
+.icon-plus, .icon-minus {
+  transition: opacity 0.3s ease;
+}
+
+/* Содержимое раскрытого блока */
+.details-content {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Разделительная линия */
+.details-content hr {
+  border: none;
+  border-top: 2px solid rgba(25, 26, 35, 0.2);
+  margin-bottom: 15px;
+}
+
+details {
+    width: 70%;            /* растягиваем на всю ширину контейнера */
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  border: 1px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 20px;
+  padding: 20px 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* при открытии — фон становится зелёным */
+details[open] {
+  background-color: #b9ff66;
+  transform: scale(1.01);
+}
+
+/* при открытии создаём небольшой "выпуклый" эффект */
+details[open] + details {
+  margin-top: 10px; /* чтобы зелёный не сливался, можно чуть подвинуть */
+}
+
+/* Текст в контенте */
+.details-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #191a23;
+  margin: 0;
+}
+
+/* team */
+.team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* кнопка справа */
+  gap: 30px;
+  margin: 40px 0;
+}
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+    grid-template-rows: repeat(2, auto);   /* 2 ряда */
+    gap: 30px; /* расстояние между карточками */
+    width: 100%;            /* чтобы занимал всю ширину родителя */
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column; /* основной блок вертикально */
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #191A23;
+  border-bottom: 5px solid #191A23;
+  padding: 20px;
+  max-width: 500px;
+  box-sizing: border-box;
+  gap: 15px;
+}
+
+.team-member-bg {
+  display: flex;
+  /* flex-direction: row; изображение слева, текст справа */
+  align-items: center;
+  gap: 20px;
+}
+
+.team-member-bg img:first-child {
+  width: 90px; /* размер фото участника */
+  height: 90px;
+  object-fit: cover; /* чтобы фото не искажалось */
+}
+
+/* Текстовый блок: имя и должность */
+.team-member-info {
+  display: flex;
+  flex-direction: column; /* ставим должность под именем */
+}
+
+/* текстовый блок с именем и должностью */
+.team-member-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.team-member-info p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+/* иконка соц. сети справа сверху */
+.team-member-bg img:last-child {
+  width: 24px;
+  height: 24px;
+  margin-left: auto; /* сдвигаем в самый правый угол */
+  margin-bottom: auto;
+}
+
+/* горизонтальная линия */
+.team-member hr {
+  border: none;
+  border-top: 1px solid #191A23;
+  margin: 10px 0;
+}
+
+/* описание снизу */
+.team-member > p:last-child {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+}
+.view-all {
+    background-color: #191A23;
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.view-all:hover {
+    background-color: black;
+    color: white;
+}
+
+/* карусель */
+.feedback-carousel {
+  background-color: #191A23;
+  color: white;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 500%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  width: 20%;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Пузырь */
+.bubble {
+  background: transparent;
+  border: 2px solid #b9ff66;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #b9ff66 transparent transparent transparent;
+}
+
+/* Имя и должность */
+.name {
+  color: #b9ff66;
+  font-weight: bold;
+  margin: 0;
+}
+.role {
+  margin: 5px 0 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Перемещение слайдов */
+#s1:checked ~ .slides { transform: translateX(0%); }
+#s2:checked ~ .slides { transform: translateX(-20%); }
+#s3:checked ~ .slides { transform: translateX(-40%); }
+#s4:checked ~ .slides { transform: translateX(-60%); }
+#s5:checked ~ .slides { transform: translateX(-80%); }
+
+/* Навигация-звезды */
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+.star {
+  width: 20px;
+  height: 20px;
+  background-image: url("Images/Images_Home/Vector white.png");
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+#s1:checked ~ .nav label:nth-child(1),
+#s2:checked ~ .nav label:nth-child(2),
+#s3:checked ~ .nav label:nth-child(3),
+#s4:checked ~ .nav label:nth-child(4),
+#s5:checked ~ .nav label:nth-child(5) {
+  background-image: url("Images/Images_Home/Vector green.png");
+}
+
+/* Стрелки */
+.arrows label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.arrows label:hover {
+  opacity: 1;
+}
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Привязка стрелок к радиокнопкам */
+#s1:checked ~ .arrows #p1,
+#s2:checked ~ .arrows #p2,
+#s3:checked ~ .arrows #p3,
+#s4:checked ~ .arrows #p4,
+#s5:checked ~ .arrows #p5 {
+  display: block;
+}
+
+/*------form------*/
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 50px;
+    gap: 40px;
+    position: relative;
+    overflow: hidden; /* обрезаем всё, что выходит за границы */
+}
+.form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    width: 50%; 
+}
+/* чекбоксы */
+.hello-row {
+    display: flex;
+    align-items: center; 
+    gap: 30px; 
+    margin-bottom: 10px;
+}
+.hello-row label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #191A23;
+  cursor: pointer;
+}
+.hello-row input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%; 
+    border: 2px solid #999;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+}
+.hello-row input[type="checkbox"] :checked {
+    background-color: #B9FF66;
+}
+/* поля формы */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+.form-group label {
+  font-size: 1rem;
+  color: #191A23;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 1px solid #B9FF66;
+}
+
+/* кнопка */
+.form-button {
+  background-color: #191A23;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* .form-button:hover {
+  background-color: #a3f74d;
+  transform: translateY(-2px);
+} */
+
+/* Правая колонка с изображением */
+.form-image {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+
+.form-image img {
+  width: 100%;
+  max-width:none;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  transform: translateX(25%); /* выдвигаем вправо на половину своей ширины */
+}
+
+

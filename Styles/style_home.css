@@ -93,6 +93,7 @@ h1, p {
     transition: 0.3s;
 }
 
+/* ---- логотипы фирм ----- */
 .join-logo {
     display: flex;
     justify-content: space-around;

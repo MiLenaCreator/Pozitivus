@@ -107,8 +107,6 @@ h1, p {
     margin: 40px 0 20px 0;
     display: flex;
     gap: 20px;
-    /* flex-direction: row;
-    justify-content: flex-start; */
 }
 .heading-h2{
     display: inline-block;
@@ -123,7 +121,6 @@ h1, p {
 }
 .heading p {
     font-size: 0.9em;
-    /* margin-left: 20px; */
     font-family: "Arial", sans-serif;
     width: 75%;
     text-align: justify;

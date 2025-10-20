@@ -114,12 +114,13 @@ header {
     display: inline-block;
     background-color: #b9ff66;
     border: 1px solid #b9ff66;
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 10px;
     font-family: "Space Grotesk", sans-serif;
 }
 .heading-h2 h2{
     margin: 0;
+    white-space: nowrap; /*  не переносит текст */
 }
 .heading p {
     font-size: 0.9em;
@@ -376,4 +377,215 @@ header {
   font-style: italic;
   font-size: 1rem;
   opacity: 0.8;
+}
+ 
+/*награды */
+
+.awards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 80px 0;
+}
+.award-card {
+    flex: 1 1 200px; /* минимальная ширина карточки 200px */
+    max-width: 250px;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+.award-card img {
+    width: 70%;
+    height: auto;
+    margin: 20px 0;
+}
+.award-card h3 {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 20px;
+}
+.award-card p {
+    text-align: left;
+    font-size: 0.9em;
+    margin: 0 10px 20px 10px;
+    padding: 0 15px;
+    line-height: 1.4;
+}
+
+/* ----присоединяйтесь к нам---- */
+.join-card {
+    background-color: #b9ff66;
+    height: 350px;
+    display: flex;
+    border: 1px solid black;
+    border-bottom: 5px solid black;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 20px;
+    border-radius: 20px;
+    overflow: visible; /* чтобы картинка могла выходить за границы */
+    position: relative;
+    padding: 20px;
+ }
+ 
+ .join-text {
+    flex: 1 1 45%; /* занимает 45% ширины контейнера */
+    padding: 30px 100px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+ }
+
+ .join-button {
+    width: 150px;
+    padding: 15px 5px;
+    align-items: center;
+    border: 1px solid #191A23;         
+    border-radius: 8px;
+    background-color: #191A23;
+    color: white; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start; /* чтобы кнопка не растягивалась */
+ }
+    .join-button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .join-img {
+  flex: 1 1 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.join-img img {
+  width: 75%;
+  max-width: 350px;
+  position: relative; 
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+/* footer */
+
+.footer {
+  background-color: #191A23;
+  color: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+  overflow: hidden;
+}
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+.footer-logo  img {
+  height: 30px;
+}
+.footer-menu {
+  display: flex;
+    gap: 25px;
+}
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+.footer-social-seti a img {
+  height: 24px;
+  margin-left: 15px;
+  transition: transform 0.3s;
+}
+.footer-social-seti a:hover img {
+  transform: scale(1.1);
+}
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.contact {
+  max-width: 40%;
+}
+.contact h3 {
+  margin-bottom: 15px;
+  background-color: #b9ff66;
+  color:#191a23;
+  padding: 2px;
+  border-radius: 5px;
+  max-width: 30%;
+}
+.contact p {
+  width: 70%;
+  margin: 15px 0;
+}
+.subscribe {
+  max-width: 55%;
+  background-color: #26272F;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 60px 30px;
+  flex: 1;
+}
+.subscribe input {
+  background-color: inherit;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #f3f3f3;
+  outline: none;
+  font-size: 1rem;
+  flex: 1;
+}
+.subscribe-button {
+  width: 150px;
+  height: 41px;
+  background-color: #B9FF66;
+  color: #191A23;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1;
+}
+.subscribe-button:hover {
+  background-color: #f3f3f3;
+}
+.footer hr {
+  width: 90%;
+  height: 1px;
+  margin: 20px 60px; 
+  background-color: grey; /* цвет линии */
+  opacity: 0.6;
+}
+.footer-bottom {
+  text-align: left;
+  padding: 25px 60px;
+  font-size: 0.9rem;
+}
+.footer-bottom a {
+  color: white;
+  padding: 25px 60px;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
 }

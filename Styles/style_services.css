@@ -103,3 +103,218 @@ header {
     border-radius: 20px;
     object-fit: cover;
 }
+/* ---кнопка back---*/
+.back-button {
+  margin: 40px auto 0 40px;
+  display: inline-block; /* оставляем компактной */
+}
+
+.back-button a {
+  display: flex;              /* делаем flex-контейнер чтобы выровнять элементы по центру */
+  align-items: center;        /* вертикальное выравнивание по центру */
+  gap: 8px;                   /* расстояние между иконкой и текстом */
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+
+.back-button img {
+  width: 30px;
+  height: auto;
+}
+
+/* -- search engine -- */
+.search-engine {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    background-color: #191a23;  
+    border-radius: 30px; 
+}
+.search-engine-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin: 50px 30px;
+    gap: 30px;
+}
+.search-engine-img  img{
+    width: 200%;
+}
+.search-engine-h3 {
+    font-family: "Space Grotesk", sans-serif;
+    margin-left: 30px;
+}
+.search-engine-h3 h3 {
+    display: inline;                     /* фон идёт за каждой строкой текста */
+    background-color: #b9ff66;           /* зелёный маркер */
+    box-decoration-break: clone;         /*  позволяет фону "продолжаться" на каждой строке */
+    padding: 3px 6px;                    /* лёгкий отступ вокруг текста */
+    border-radius: 6px;                  /* плавные края */
+    color: black;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4;
+}   
+.search-engine-text {
+    color: white;
+    max-width: 700px;
+    margin: 0 30px 0 20px;
+    display: flex;   /* чтобы кнопка была справа */
+    flex-direction: column; /* чтобы текст был сверху */
+    align-items: flex-start; /* выравнивание по левому краю */
+}
+.search-engine-text p {
+    padding: 0 0 20px 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0;
+}
+.learn-more {
+    width: 100%;
+    padding:  10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.learn-more:hover {
+  background-color: #b9ff66;
+}
+
+/* heading */
+.heading {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    display: flex;
+    gap: 20px;
+}
+.heading-h2{
+    display: inline-block;
+    background-color: #b9ff66;
+    border: 1px solid #b9ff66;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: "Space Grotesk", sans-serif;
+}
+.heading-h2 h2{
+    margin: 0;
+    white-space: nowrap; /*  не переносит текст */
+}
+.heading p {
+    font-size: 0.9em;
+    font-family: "Arial", sans-serif;
+    width: 75%;
+    text-align: justify;
+    margin: 0;
+}
+
+/* ---- seo процесс ---- */
+.seo-process {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.seo-process-container {
+  width: 100%;
+}
+.seo-process-step {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+}
+.seo-process-img {
+    position: relative; 
+}
+.seo-process-img img {
+    width: 90%;
+}
+.seo-step-number {
+    position: absolute;
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Точное центрирование */
+    color: #b9ff66; /* Цвет текста */
+    padding: 10px; /* Отступы внутри текстового блока */
+    font-size: 2em; /* Размер шрифта */
+    font-family: "Space Grotesk", sans-serif;;
+}
+.seo-process-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    margin-left: 100px;
+}
+.seo-process-text h3 {
+    margin:  0;
+    font-size: 1.3em;
+    font-family: "Space Grotesk", sans-serif;
+}
+.seo-process-text p {
+    text-align: start;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*---use cases---*/
+.case-solutions {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #191A23;
+  border-radius: 20px;
+  padding: 60px 40px;
+  color: white;
+  gap: 0; /* убираем промежутки между колонками — всё решим бордером */
+  margin-bottom: 80px;
+}
+
+.case {
+    flex: 1; /* каждая колонка равной ширины */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 30px;
+  text-align: left;
+  gap: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3); /* вертикальная разделительная линия */
+}
+
+.case:last-child {
+  border-right: none;
+}
+.learn-more {
+    align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px;
+  background-color: transparent;
+  color: #b9ff66;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Arial", sans-serif;
+  box-shadow: none;       /* убираем внешнюю тень */
+  outline: none;          /* убираем рамку при фокусе */
+  border: none;           /* если не нужна рамка — можно убрать */
+}
+
+.learn-more img {
+  width: 30px;
+  height: 30px;
+}

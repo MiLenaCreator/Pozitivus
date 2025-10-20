@@ -1,4 +1,4 @@
-* {
+`* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -181,18 +181,6 @@ header {
     overflow: hidden;
 }
 
-/* Линия по центру */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background-color: #cfcfcf;
-  z-index: 1;
-}
 
 /* Элемент таймлайна */
 .timeline-item {
@@ -272,21 +260,120 @@ header {
     left: 50%;
 }
 
-
-/* Соединительная линия (иконка) */
-/* .icon {
-  position: absolute;
-  top: 20px;
-  width: 20px;
-  height: 20px;
-  background-color: #a9ff4c;
-  border-radius: 4px;
-} */
-
 .timeline-item.left::after {
   right: -7px;
 }
 
 .timeline-item.right::after {
   left: -7px;
+}
+
+/* Core Values */
+.core-values {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0;
+}
+.v-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки одинаковой ширины */
+  gap: 30px; /* расстояние между карточками */
+  margin: 40px 0; /* отступ сверху и снизу */
+}
+.card { /* стили для каждой карточки */
+    border: 1px solid black;
+    border-bottom: 5px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+    display: flex;     
+    justify-content: space-between;  
+    align-items: flex-start;
+}
+.card > div {
+    display: flex;
+    flex-direction: column; /* h3, hr, p — вертикально */
+    justify-content: flex-start;
+    margin:  0 20px;
+    gap: 10px;
+    flex: 1; /* занимает всё доступное пространство */
+}
+.card h3 {
+  margin: 20px 0;
+}
+.card hr {
+  width: 90%;
+  border: 1px solid grey;
+  margin: 0;
+}
+.card p {
+    margin: 20px 0;
+    width: 90%;
+}
+/* .card div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.card img {
+    width: 40%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+/* Если нет картинки — текст центрируется */
+.card:not(:has(img)) {
+  justify-content:flex-start;
+  flex-direction: column; 
+
+}
+
+/* -- цитата -- */
+.quote {
+    background-color: #191a23;
+    padding: 40px 20px;
+    border-radius: 30px;
+    text-align: left;
+    color: white;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+.quote-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    margin: 30px;
+    gap: 60px;
+    position: relative;
+}
+.quote img {
+    width: 85%;
+    max-width: 350px;
+    position: relative;
+    top: -100px; 
+    transition: transform 0.3s ease;
+}
+.quote-container >div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* выравнивает h1 и p по вертикали */
+    align-items: flex-start; /* выравнивает текст по левому краю */
+    gap: 30px;
+}
+.quote-container h1 {
+  margin: 0 30px 0 0;
+  font-size: 1.6em;
+  line-height: 1.6;
+}
+
+.quote-container p {
+  margin: 0;
+  font-style: italic;
+  font-size: 1rem;
+  opacity: 0.8;
 }

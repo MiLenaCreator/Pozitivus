@@ -13,7 +13,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-button {
+button1 {
     font-family: inherit;
 }
 /* Шапка */
@@ -180,6 +180,11 @@ header {
     color: black;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+.learn-more button {
+    background-color: #f3f3f3;
+    color: black;
+    text-align: center;
 }
 .learn-more:hover {
   background-color: #b9ff66;

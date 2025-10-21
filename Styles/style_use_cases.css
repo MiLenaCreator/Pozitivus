@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+button {
+    font-family: inherit;
+}
+/* Шапка */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    color: rgb(31, 31, 31);
+    
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+.menu {
+    display: flex;
+    gap: 15px; 
+}
+.menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color:rgb(31, 31, 31);
+}
+.menu a[href="UseCases.html"] {
+    background-color: #b9ff66;
+    padding: 2px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.request {
+    padding: 10px 25px;
+    border: 1px solid black;           
+    border-radius: 5px;
+    background-color: white; 
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Arial", sans-serif;
+    font-size: 1em;
+}
+
+/* -----expert----- */
+
+.expert {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f3f3f3;
+    border-radius: 30px;
+    overflow: hidden; /* чтобы картинка не выходила за границы */
+    padding: 30px; /* общий внутренний отступ */
+}
+.expert-text {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 30px;
+    text-align: left; 
+    gap: 20px;
+    max-width: 85%; /* немного сужаем текстовый блок */      
+}
+.expert-text h1 {
+    font-size: 2.5em;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+}
+.expert-text p {
+    width: 75%;
+    margin: 0;
+    line-height: 1.6;
+}
+/* Блок с картинкой */
+.expert-img {
+    flex: 1 1 50%;
+    padding: 0 30px 0 0; /* отступ справа от картинки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.expert-img img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+/* ---кнопка back---*/
+.back-button {
+  margin: 40px auto 0 40px;
+  display: inline-block; /* оставляем компактной */
+}
+
+.back-button a {
+  display: flex;              /* делаем flex-контейнер чтобы выровнять элементы по центру */
+  align-items: center;        /* вертикальное выравнивание по центру */
+  gap: 8px;                   /* расстояние между иконкой и текстом */
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+
+.back-button img {
+  width: 30px;
+  height: auto;
+}
+.back-button img:hover {
+    transform: scale(1.1);
+}
+
+/* <!-- success story --> */
+.success-story {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 30px;
+    background-color: #191a23;
+    border-radius: 30px;
+    color: white;
+    margin: 50px 0;
+}
+.success-container {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding: 0 30px;
+    text-align: left; 
+    gap: 20px;
+}
+.success-text {
+    width: 75%;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 30px 0 ;
+    text-align: left; 
+    gap: 20px;
+}
+.success-text h2 {
+    display: inline;                     /* фон идёт за каждой строкой текста */
+    background-color: #b9ff66;           /* зелёный маркер */
+    box-decoration-break: clone;         /*  позволяет фону "продолжаться" на каждой строке */
+    padding: 3px 6px;                    /* лёгкий отступ вокруг текста */
+    border-radius: 6px;                  /* плавные края */
+    color: black;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+.success-text h3 {
+    font-size: 1.3em;
+    width: 75%;
+}
+.success-text p{
+    width:75%;
+}
+.sb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #191a23;
+    color: #b9ff66;
+    border: none;
+}
+.sb img {
+    max-width: 45px;
+}
+.sb img:hover {
+    transform: scale(1.1);
+}
+.success-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+}
+.card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    max-width: 150px;
+    max-height: 150px;
+    padding: 50px 20px;
+}
+.card h1 {
+    margin: 0 0 20px 0;
+}
+.card p {
+    text-align: center;
+}
+
+/* heading */
+.heading {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    display: flex;
+    gap: 20px;
+}
+.heading-h2{
+    display: inline-block;
+    background-color: #b9ff66;
+    border: 1px solid #b9ff66;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: "Space Grotesk", sans-serif;
+}
+.heading-h2 h2{
+    margin: 0;
+    white-space: nowrap; /*  не переносит текст */
+}
+.heading p {
+    font-size: 0.9em;
+    font-family: "Arial", sans-serif;
+    width: 75%;
+    text-align: justify;
+    margin: 0;
+}

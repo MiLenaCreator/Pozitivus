@@ -67,7 +67,7 @@ h1, p {
     justify-content: center;
     align-items: start;
     padding: 0 50px 0 0;
-    text-align:justify; 
+    text-align: justify; 
     gap: 20px;      
 }
 .booking-text h1 {
@@ -669,6 +669,7 @@ input[type="radio"] {
 #s4:checked ~ .nav label:nth-child(4),
 #s5:checked ~ .nav label:nth-child(5) {
   background-image: url("Images/Images_Home/Vector green.png");
+  z-index: 1000;
 }
 
 /* Стрелки */
@@ -743,7 +744,7 @@ input[type="radio"] {
     transition: all 0.2s ease-in-out;
     margin-right: 10px;
 }
-.hello-row input[type="checkbox"] :checked {
+.hello-row input[type="checkbox"]:checked {
     background-color: #B9FF66;
 }
 /* поля формы */
@@ -787,10 +788,6 @@ input[type="radio"] {
   width: 100%;
 }
 
-/* .form-button:hover {
-  background-color: #a3f74d;
-  transform: translateY(-2px);
-} */
 
 /* Правая колонка с изображением */
 .form-image {
@@ -929,4 +926,576 @@ input[type="radio"] {
 }
 .footer-bottom a:hover {
   text-decoration: underline;
+}
+/* ----- Гамбургер меню ----- */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/*---------- адаптив --------*/
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .menu {
+    display: none;    /* скрываем меню */
+    flex-direction: column;
+    position: absolute;
+    top: 80px;      /* ниже шапки */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .menu a {
+    margin: 0;
+    font-size: 1.1em;
+  }
+
+  .menu.active {
+    display: flex; /* показываем меню при активации */
+  }
+
+  .hamburger {
+    display: block;  /* показываем иконку */
+  }
+
+  .request {
+    display: none;  /* кнопку убираем, чтобы не мешала */
+  }
+
+  header {
+    position: relative;           
+  }
+  
+  .booking {
+    flex-direction: column;
+    align-items: center; /* по центру */
+    text-align: center;
+  }
+  .booking-text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .booking-text h1 {
+    align-self: flex-start;
+    text-align: left;      
+    width: 100%;           
+    margin-bottom: 10px;
+  }
+  
+  /* Переставляем порядок: h1 -> img -> p -> button */
+  .booking-text h1 {
+    order: 1;
+  }
+  .booking-text .booking-img {
+    order: 2;
+    width: 100%;
+    max-width: 350px;
+  }
+  .booking-text p {
+    order: 3;
+  }
+  .booking-text .book-consultation {
+    order: 4;
+  }
+
+  .booking-img img {
+    width: 90%;
+    height: auto;
+  }
+  .book-consultation {
+    width: 100%;
+  }
+  .join-logo {
+    flex-wrap: wrap;          /* разрешаем перенос */
+    justify-content: center;   
+    gap: 10px;                
+  }
+
+  .join-logo img {
+    flex: 0 1 120px;           
+    max-width: 25%;            
+    height: auto;
+  }
+
+  .heading {
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;    
+    gap: 10px;             
+  }
+  .heading p {
+    width: 90%;           
+    text-align: center;    
+  }
+  .heading-h2 {
+    margin-bottom: 10px;   
+  }
+  .services {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    gap: 10px;               
+    margin: 20px 0;           
+  }
+
+  .services > div {
+  display: flex;
+  flex-direction: column;       /* текст сверху, нижний блок снизу */
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  gap: 20px;
+}
+
+.services-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.services-button {
+  display: flex;
+  justify-content: space-between; /* кнопка слева, рисунок справа */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.services-bottom button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+button.sb1, button.sb2, button.sb3 {
+    font-size: 0; 
+}
+
+.proposal-bg {
+    flex-direction: column; 
+    padding: 20px;          
+    height: auto;           
+    gap: 15px;
+  }
+
+  .proposal-text {
+    flex: 1 1 100%;
+    padding: 0;
+    text-align: center;     
+  }
+
+  .proposal-button {
+    flex: 1 1 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .proposal-img {
+    display: none; /* скрываем картинку */
+  }
+
+
+  .case-solutions {
+    background-color: white;
+    flex-direction: row;           
+    overflow-x: auto;              
+    scroll-snap-type: x mandatory; 
+    gap: 20px;
+    padding: 20px 10px;
+  }
+  .case {
+    flex: 0 0 80%;                 
+    border-radius: 15px;           
+    border-right: none;             
+    border-bottom: none;
+    background-color: #191A23;     
+    padding: 20px;
+    scroll-snap-align: start;      /* прилипание к началу блока */
+    box-sizing: border-box;
+  }
+  .case:last-child {
+    margin-right: 10px;
+  }
+
+  .team {
+    display: flex;           /* превращаем grid в flex */
+    flex-direction: column;  
+    gap: 20px;               
+  }
+
+  .team-member {
+    max-width: 100%;         
+  }
+
+  /* Скрываем все карточки, кроме первых 4 */
+  .team-member:nth-child(n+5) {
+    display: none;
+  }
+
+  .view-all{
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .form {
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .form-text {
+    width: 100%;
+  }
+
+  .hello-row {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .hello-row label {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hello-row input[type="checkbox"] {
+    flex-shrink: 0;
+  }
+  .form-image {
+    display: none;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .footer-social-seti {
+    order: 2;
+    margin-top: 10px;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 30px;
+  }
+
+  .contact {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contact h3 {
+    max-width: 100%;
+    margin: 0 auto 10px auto;
+  }
+
+  .contact p {
+    width: 100%;
+  }
+
+  .subscribe {
+    order: 1;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .subscribe input {
+    width: 100%;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
+
+  .footer hr {
+    margin: 20px 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .footer-bottom a {
+    padding: 5px 0;
+    display: block;
+  }
+}
+
+/* -------max-width: 480px---------------- */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  /* Меню */
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    gap: 15px;
+    padding: 15px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .menu a {
+    margin: 0;
+    font-size: 1em;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .request {
+    display: none;
+  }
+
+  header {
+    position: relative;
+  }
+
+  /* Booking */
+  .booking {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .booking-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .booking-text h1 {
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    order: 1;
+  }
+  .booking-text .booking-img {
+    order: 2;
+    width: 100%;
+    max-width: 300px;
+  }
+  .booking-text p {
+    order: 3;
+  }
+  .booking-text .book-consultation {
+    order: 4;
+    width: 100%;
+  }
+  .booking-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Join logo */
+  .join-logo {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .join-logo img {
+    flex: 0 1 100px;
+    max-width: 30%;
+    height: auto;
+  }
+
+  /* Heading */
+  .heading {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .heading p {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Services */
+  .services {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .services > div {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  .services-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .services-button {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .services-bottom button {
+    font-size: 0;
+  }
+
+  /* Proposal */
+  .proposal-bg {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+    gap: 15px;
+  }
+  .proposal-text, .proposal-button {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .proposal-img {
+    display: none;
+  }
+
+  /* Case solutions */
+  .case-solutions {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 15px 10px;
+  }
+  .case {
+    flex: 0 0 85%;
+    border-radius: 15px;
+    padding: 15px;
+    scroll-snap-align: start;
+  }
+
+  /* Team */
+  .team {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .team-member {
+    max-width: 100%;
+  }
+  .team-member:nth-child(n+5) {
+    display: none;
+  }
+  .view-all {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Form */
+  .form {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+  .form-text {
+    width: 100%;
+  }
+  .hello-row {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .hello-row label {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .hello-row input[type="checkbox"] {
+    flex-shrink: 0;
+  }
+  .form-image {
+    display: none;
+  }
+
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+  .footer-menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+  }
+  .contact, .subscribe {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .subscribe input, .subscribe-button {
+    width: 100%;
+  }
+  .footer-social-seti {
+    order: 2;
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .footer hr {
+    margin: 15px 0;
+  }
+  .footer-bottom {
+    text-align: center;
+    padding: 15px 10px;
+  }
+  .footer-bottom a {
+    display: block;
+    padding: 5px 0;
+  }
 }

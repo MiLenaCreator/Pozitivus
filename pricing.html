@@ -10,8 +10,12 @@
     <div class="container">
         <header class="header">
             <div class="header-left">
-                <div class="logo"><img src= "Images/Images_Home/Logo.png" alt="Logo"></div>
+                <div class="logo"><a href="index.html"><img src= "Images/Images_Home/Logo.png" alt="Logo"></a></div>
             </div>
+            <!-- гамбургер -->
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
             <nav class="menu">
                 <a href="About.html">About us</a>
                 <a href="Services.html">Services</a>
@@ -306,6 +310,14 @@
         </div>
      </footer>
      
-    </div>    
+    </div> 
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+</script>   
 </body>
 </html>

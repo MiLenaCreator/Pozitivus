@@ -42,7 +42,7 @@ header {
     text-decoration: none;
     color:rgb(31, 31, 31);
 }
-.menu a[href="Use Cases.html"] {
+.menu a[href="use cases.html"] {
     background-color: #b9ff66;
     padding: 2px;
     border-radius: 4px;

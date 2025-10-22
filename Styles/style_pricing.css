@@ -42,7 +42,7 @@ header {
     text-decoration: none;
     color:rgb(31, 31, 31);
 }
-.menu a[href="Pricing.html"] {
+.menu a[href="pricing.html"] {
     background-color: #b9ff66;
     padding: 2px;
     border-radius: 4px;
